@@ -36,5 +36,5 @@ git_fetch (){
         local branch="main"
     fi
     git fetch origin --prune
-    git fetch . origin/main:main
+    git fetch . origin/$branch:$branch
 }
