@@ -31,6 +31,10 @@ chd (){
 }
 
 git_fetch (){
+    local branch=$1
+    if [ -z $branch ]; then
+        local branch="main"
+    fi
     git fetch origin --prune
     git fetch . origin/main:main
 }
