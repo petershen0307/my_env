@@ -15,13 +15,13 @@ ZSH_THEME="agnoster"
 plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source "$HOME/.cargo/env"
 
 # User configuration
 export PATH="/home/peter/.local/bin:$PATH"
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
-# export MANPATH="/usr/local/man:$MANPATH"
+
+source "$HOME/.cargo/env"
+source "$HOME/.asdf/asdf.sh"
+source "$HOME/.asdf/completions/asdf.bash"
 
 # Alias
 alias ll='ls -alF'
@@ -37,4 +37,12 @@ git_fetch (){
     fi
     git fetch origin --prune
     git fetch . origin/$branch:$branch
+}
+
+code (){
+    "/mnt/c/Users/peter/AppData/Local/Programs/Microsoft VS Code/bin/code" $1
+}
+
+code-insiders (){
+    "/mnt/c/Users/peter/AppData/Local/Programs/Microsoft VS Code Insiders/bin/code-insiders" $1
 }
