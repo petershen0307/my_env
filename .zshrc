@@ -30,7 +30,7 @@ chd (){
     cd "$(find $HOME/code -type d -not -path "*/.git/*" | fzf)"
 }
 
-git_fetch (){
+pgf (){
     local branch=$1
     if [ -z $branch ]; then
         local branch="main"
