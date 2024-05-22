@@ -25,6 +25,9 @@ source "$HOME/.asdf/completions/asdf.bash"
 
 # Alias
 alias ll='ls -alF'
+    # sudo apt install xclip
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 chd (){
     cd "$(find $HOME/code -type d -not -path "*/.git/*" | fzf)"
