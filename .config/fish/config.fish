@@ -1,3 +1,6 @@
+set -g fish_prompt_pwd_dir_length 0 # show full directory name
+set -g fish_vcs_branch_name_length 0 # show full branch name
+
 source ~/.asdf/asdf.fish
 
 if not test -e ~/.config/fish/completions
