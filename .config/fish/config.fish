@@ -3,7 +3,7 @@ set -g fish_vcs_branch_name_length 0 # show full branch name
 
 source ~/.asdf/asdf.fish
 
-if not test -e ~/.config/fish/completions
+if not test -e ~/.config/fish/completions/asdf.fish
     mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 end
 
