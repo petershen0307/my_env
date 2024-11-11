@@ -29,6 +29,10 @@ function pgf
     git fetch . origin/$branch:$branch
 end
 
+function ll
+    ls -al $argv
+end
+
 function code
     "/mnt/c/Users/peter_shen/AppData/Local/Programs/Microsoft VS Code/bin/code" $argv
 end
