@@ -8,28 +8,8 @@ if not test -e ~/.config/fish/completions/asdf.fish
     mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 end
 
-# function
-function pbcopy
-    xclip -selection clipboard
-end
-
-function pbpaste
-    xclip -selection clipboard -o
-end
-
-function chd
-    cd "$(find $HOME/code -type d -not -path "*/.git/*" | fzf)"
-end
-
-function pgf
-    set -f branch $argv[1]
-    if test -z $branch
-        set branch main
-    end
-    git fetch origin --prune
-    git fetch . origin/$branch:$branch
-end
-
+# default functions
+# other functions please add at directory $HOME/.config/fish/functions
 function ll
     ls -al $argv
 end
