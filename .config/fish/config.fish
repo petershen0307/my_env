@@ -18,6 +18,6 @@ function code
     "/mnt/c/Users/peter_shen/AppData/Local/Programs/Microsoft VS Code/bin/code" $argv
 end
 
-function code-insiders
+function codei
     "/mnt/c/Users/peter/AppData/Local/Programs/Microsoft VS Code Insiders/bin/code-insiders" $argv
 end
