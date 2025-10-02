@@ -4,6 +4,11 @@ function pgf
     if test -z $branch
         set branch main
     end
-    git fetch origin --prune
-    git fetch . origin/$branch:$branch
+    # if input argument is current branch use git pull instead
+    if test $branch = (git branch --show-current)
+        git pull origin $branch
+    else
+        git fetch origin --prune
+        git fetch . origin/$branch:$branch
+    end
 end
